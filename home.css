@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #6e3d41; /* Dark dusty rose background */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    max-width: 1000px;
+    height: 500px;
+    background-color: #6e3d41;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* LEFT PANEL (Lock Screen Text & Mascot) */
+.left-panel {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: #ffd6d6;
+    background-image: linear-gradient(rgba(110, 61, 65, 0.5), rgba(110, 61, 65, 0.5)), url('https://picsum.photos/600/500?blur=3'); /* Dynamic blurred backdrop placeholder */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px 0 0 20px;
+}
+
+.cursive-text {
+    font-family: 'Alex Brush', cursive;
+    font-size: 3.5rem;
+    margin: 0;
+    color: #4a1c20;
+    text-shadow: 1px 1px 2px rgba(255, 214, 214, 0.6);
+}
+
+#lock-subtext {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #4a1c20;
+    font-weight: 500;
+}
+
+.mascot-wrapper img {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+}
+
+#try-again-btn {
+    margin-top: 15px;
+    background: none;
+    border: none;
+    color: #4a1c20;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* RIGHT PANEL (Keypad Interface) */
+.right-panel {
+    flex: 1;
+    background-color: #6e3d41;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 20px 20px 0;
+}
+
+.password-display {
+    width: 75%;
+    height: 55px;
+    background-color: #f7a4a4;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #4a1c20;
+    letter-spacing: 4px;
+    font-weight: bold;
+    box-shadow: inset 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Creating Heart Shape Buttons */
+.key-btn {
+    width: 65px;
+    height: 60px;
+    background-color: #f7a4a4;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4a1c20;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8px;
+    transition: transform 0.1s ease, background-color 0.2s;
+    
+    /* Perfect CSS Heart Shape Grid Clip Path */
+    clip-path: polygon(50% 15%, 65% 0%, 85% 0%, 100% 20%, 100% 40%, 50% 95%, 0% 40%, 0% 20%, 15% 0%, 35% 0%);
+}
+
+.key-btn:hover {
+    background-color: #ffb8b8;
+    transform: scale(1.05);
+}
+
+.key-btn:active {
+    transform: scale(0.95);
+}
+
+.clear-btn, .check-btn {
+    background-color: #df8484;
+    font-size: 1rem;
+}
+
+/* SUCCESS SCREEN STYLING */
+.success-content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    color: #f7a4a4;
+    font-size: 4rem;
+}
+
+.sub-title {
+    color: #ffd6d6;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.options-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.option-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+}
+
+.option-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.option-card a {
+    color: #ffd6d6;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.option-card a:hover {
+    border-color: #ffd6d6;
+}
